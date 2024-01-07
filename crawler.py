@@ -17,8 +17,11 @@ HOUSE_GENERAL_INFO_CLASS = "DetailView_adviewPtyItem__V_sof"
 HOUSE_LINK_DETAIL_CLASS = ".AdItem_adItem__gDDQT"
 DEFAULT_HOME_URL = "https://www.nhatot.com/mua-ban-nha-dat"
 # LOCATIONS = {"HO CHI MINH": "tp-ho-chi-minh", "HA NOI": "ha-noi", "DA NANG": "da-nang"}
-LOCATIONS = {"da-nang": 50, "ha-noi": 100, "tp-ho-chi-minh": 150}
+LOCATIONS = {"da-nang": 50, "ha-noi": 500, "tp-ho-chi-minh": 150}
 # LOCATIONS = {"tp-ho-chi-minh": 450}
+
+
+DEFAULT_HOME_URL = "https://www.nhatot.com/mua-ban-nha-dat"
 
 
 # define option
@@ -65,7 +68,7 @@ for location, page_max in LOCATIONS.items():
     page = -1
     while page < page_max:
         page += 1
-        if page % 50 == 0:
+        if page % 5 == 0:
             csv_file = open(
                 "./data" + f"/page_nha_dat_{location}_{page//50}.csv",
                 "w",
